@@ -1,0 +1,74 @@
+.jumbotron {
+    background: #3F0083;
+    color: white;
+    padding-bottom: 80px;
+}
+
+.title {
+    font-family: 'Ramabhadra';
+}
+
+.table {
+    table-layout: fixed;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableheader {
+    text-align: center;
+}
+
+.subtitle {
+    font-family: 'Roboto';
+}
+
+.jumbotron .btn-primary {
+    background: #3F0083;
+    border-color: white;
+
+}
+
+.btn {
+    font-family: 'Roboto';
+}
+
+.alert {
+    font-family: 'Roboto Light';
+}
+
+.jumbotron .btn-primary:hover {
+    background: #5400ad;
+}
+
+.jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em;
+}
+
+.navbar + .jumbotron {
+    margin-top: -20px;
+}
+
+.jumbotron .logo {
+    display: block;
+    background: #3F0083;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid white;
+}
+
+.jumbotron .logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.glyphicon-user img {
+    width: auto;
+    height: 100%;
+    display: block;
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout (~{::body},'hello')}" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <!--/*@thymesVar id="username" type="java.lang.String"*/-->
+    <p th:text="${username}"/>
+    <!--/*@thymesVar id="userimage" type="java.lang.String"*/-->
+    <img style="width: 5%;height: 5%;" th:src="${userimage}">
+</div>
+</body>
+</html>

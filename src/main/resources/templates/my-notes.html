@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout (~{::body},'index')}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h2 class="tableheader">Notes</h2>
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>User</th>
+        <th>ID</th>
+    </tr>
+    <!--/*@thymesVar id="note" type="com.concoursenotes.Note"*/-->
+    <tr th:each="note: ${notes}">
+        <td th:text="${note.title}">title</td>
+        <td th:text="${note.username}"></td>
+        <td th:text="${note.id}">-1</td>
+    </tr>
+</table>
+</body>
+</html>

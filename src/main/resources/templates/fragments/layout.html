@@ -1,0 +1,59 @@
+<!doctype html>
+<html th:fragment="layout (template, menu)" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Concourse Notes</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Ramabhadra|Roboto:300,400" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8851840803640055",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li>
+                <a href="error.html"><span class="glyphicon glyphicon-book"></span> How Concourse Works</a>
+            </li>
+            <li class="dropdown">
+                <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><span
+                        class="glyphicon glyphicon-info-sign"></span> Subjects <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="/error.html">Math</a></li>
+                    <li><a href="/error.html">Science</a></li>
+                    <li><a href="/error.html">English</a></li>
+                    <li><a href="/error.html">History</a></li>
+                    <li><a href="/error.html">World Language</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-right">
+                <a href="/login" th:href="${userloginaction}">
+                    <img th:src="${userimage}">
+                    <span class="profile" th:text="${username}">
+                    </span>
+                    <span href="/login" th:href="${userloginaction}">
+                        <span class="profile" th:text="${logintext}"></span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div th:replace="${template}"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>

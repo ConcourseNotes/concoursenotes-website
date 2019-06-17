@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout (~{::body},'index')}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div class="jumbotron text-center">
+    <div class="container">
+        <a class="logo" href="/">
+            <img src="/img/logoCircleColor.png">
+        </a>
+        <h1 class="title">Concourse Notes</h1>
+        <p class="subtitle">A note sharing service that makes classes easier.</p>
+        <a class="btn btn-lg btn-default" href="notes.html"
+           type="button"><span
+                class="glyphicon glyphicon-download"></span> Study</a>
+        <br> <br>
+        <a class="btn btn-primary" href="submit.html" type="button"><span
+                class="glyphicon glyphicon-pencil"></span> Submit</a>
+    </div>
+</div>
+<div class="container">
+    <div class="alert alert-info text-center" role="alert">
+        Concourse Notes is currently in development. We plan to release a beta version around March 2019.
+    </div>
+</div>
+
+</body>
+</html>
