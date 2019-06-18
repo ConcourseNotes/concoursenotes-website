@@ -1,1 +1,1 @@
-web: java -jar target/concourse-notes-1.0.jar
+web: java -jar target/concoursenotes-website-1.0.jar
