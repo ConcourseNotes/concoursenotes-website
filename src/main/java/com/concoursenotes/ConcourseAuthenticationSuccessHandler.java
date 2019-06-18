@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Concourse Notes 2019.
+ */
+
 package com.concoursenotes;
 
 import com.zaxxer.hikari.HikariConfig;

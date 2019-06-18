@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) Concourse Notes 2019.
+ */
+
 package com.concoursenotes;
 
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;

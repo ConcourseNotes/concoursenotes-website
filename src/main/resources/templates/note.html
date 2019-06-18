@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) Concourse Notes 2019.
+  -->
+
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout (~{::body},'index')}" xmlns:th="http://www.thymeleaf.org">
 
@@ -5,7 +9,7 @@
 <!--/*@thymesVar id="note" type="com.concoursenotes.Note"*/-->
 <h2 class="noteheader" th:text="${note.title}">Note</h2>
 <div id="notemetadata">
-    <h3>Created by <a th:href="|/user/ ${note.userID}|" th:text="${note.username}"
+    <h3>Created by <a th:href="|/user/${note.userID}|" th:text="${note.username}"
                       th:title="|Visit ${note.username}| + ${'''s page'}">user</a></h3>
     <h3 th:text="|Created on ${note.creation}|" th:title="|Last modified ${note.edit.toLocaleString()}|">Created on a
         day</h3>
