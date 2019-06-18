@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html th:fragment="layout (template, menu)" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <title>Concourse Notes</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -11,6 +12,7 @@
             google_ad_client: "ca-pub-8851840803640055",
             enable_page_level_ads: true
         });
+
     </script>
 </head>
 
@@ -18,6 +20,13 @@
 <nav class="navbar navbar-default navbar-static-top navbar-inverse">
     <div class="container">
         <ul class="nav navbar-nav">
+            <li class="nav">
+                <img class="concourse-logo" src="http://concoursenotes.com/img/logoCircleColor.png">
+            </li>
+            <li class="nav">
+                <h5 class="concourse-brand"><a class="concourse-brand" href="/">Concourse Notes</a>
+                </h5>
+            </li>
             <li class="active">
                 <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
             </li>

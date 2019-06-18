@@ -4,8 +4,24 @@
     padding-bottom: 80px;
 }
 
-.title {
-    font-family: 'Ramabhadra';
+.title,
+.navbar-brand {
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+a.concourse-brand:link,
+a.concourse-brand:visited,
+a.concourse-brand:active,
+a.concourse-brand:hover {
+    color: white;
+}
+
+.concourse-brand {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 12px;
+    margin-right: 25px;
+    font-size: 16pt;
 }
 
 .table {
@@ -15,26 +31,47 @@
     margin-right: auto;
 }
 
+.concourse-logo {
+    max-width: 35px;
+    margin: auto;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
 .tableheader {
     text-align: center;
 }
 
+.noteheader {
+    text-align: center;
+}
+
+.notemetadata {
+    max-width: 75%;
+    font-family: 'Roboto Light', sans-serif;
+}
+
+#notemetadata > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+}
+
 .subtitle {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron .btn-primary {
     background: #3F0083;
     border-color: white;
-
 }
 
 .btn {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 .alert {
-    font-family: 'Roboto Light';
+    font-family: 'Roboto Light', sans-serif;
 }
 
 .jumbotron .btn-primary:hover {
@@ -62,13 +99,13 @@
     border: 2px solid white;
 }
 
-.jumbotron .logo img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .glyphicon-user img {
     width: auto;
     height: 100%;
     display: block;
+}
+
+.jumbotron .logo img {
+    max-width: 100%;
+    max-height: 100%;
 }
