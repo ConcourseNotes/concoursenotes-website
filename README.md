@@ -3,8 +3,8 @@
 [![CircleCI](https://circleci.com/gh/heroku/java-getting-started.svg?style=svg)](https://circleci.com/gh/heroku/java-getting-started)
 ### A note sharing service that makes classes easier
 
+<a href="https://testing.concoursenotes.com/"><img src="https://testing.concoursenotes.com/img/logoCircleColor.png" width="100" height="100"></a>
 
-[![Visit the testing deployment](https://testing.concoursenotes.com/img/logoCircleColor.png)](https://testing.concoursenotes.com/)
 
 ## Running Locally
 
