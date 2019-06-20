@@ -1,0 +1,20 @@
+<!--
+  ~ Copyright (c) Concourse Notes 2019.
+  -->
+
+<!DOCTYPE HTML>
+<html th:replace="~{fragments/layout :: layout (~{::body},'index')}" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit | Concourse Notes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Submit your notes</h1>
+<form action="#" th:action="@{/submit}" th:object="${note}" method="post">
+    <p>Title: <input type="text" th:field="*{title}"/></p>
+    <p>Content: <input type="text" th:field="*{content}"/></p>
+    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+</form>
+</body>
+</html>

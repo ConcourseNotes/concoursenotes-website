@@ -73,7 +73,7 @@ public class Main {
         return "note";
     }
 
-    private void putHeaderDetails(OAuth2Authentication authentication, ModelMap map) {
+    static void putHeaderDetails(OAuth2Authentication authentication, ModelMap map) {
         LinkedHashMap<String, String> details = (LinkedHashMap<String, String>) authentication.getUserAuthentication().getDetails();
         map.addAttribute("userimage", details.get("picture") + "?sz=20");
         map.addAttribute("userloginaction", "/logout");

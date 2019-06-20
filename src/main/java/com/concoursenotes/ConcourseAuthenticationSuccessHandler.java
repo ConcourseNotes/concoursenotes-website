@@ -15,10 +15,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.LinkedHashMap;
 
 @Component
@@ -41,14 +38,19 @@ public class ConcourseAuthenticationSuccessHandler implements ApplicationListene
             System.out.println("NULL NULL NULL NULL");
         }
         try (Connection connection = dataSource.getConnection()) {
-            Statement statement = connection.createStatement();
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO public.users\n" +
+                    "    (\"id\", \"username\", \"creation\", \"email\", \"premium\") VALUES (?, ?, DEFAULT, ?, DEFAULT) ON CONFLICT DO NOTHING");
             LinkedHashMap<Object, Object> details = (LinkedHashMap<Object, Object>) authentication.getUserAuthentication().getDetails();
-            ResultSet rs = statement.executeQuery("select exists(select * from public.users where id='" + details.get("id") + "')");
+            statement.setString(1, (String) details.get("id"));
+            statement.setString(2, (String) details.get("name"));
+            statement.setString(3, (String) details.get("email"));
+            PreparedStatement exists = connection.prepareStatement("select exists(select * from public.users where id=?)");
+            exists.setString(1, (String) details.get("id"));
+            ResultSet rs = exists.executeQuery();
             rs.next();
             if (!rs.getBoolean("exists") && (Boolean) details.get("verified_email")) {
                 System.out.println("INSERT NEW USER");
-                connection.createStatement().executeUpdate("INSERT INTO public.users\n" +
-                        "    (\"id\", \"username\", \"creation\", \"email\", \"premium\") VALUES ('" + details.get("id") + "', '" + details.get("name") + "', DEFAULT, '" + details.get("email") + "', DEFAULT) ON CONFLICT DO NOTHING");
+                statement.executeUpdate();
             }
         } catch (SQLException e) {
             e.printStackTrace();
