@@ -19,7 +19,7 @@ $ heroku local:start
 
 Concourse should now be running on [localhost:5000](http://localhost:5000/).
 
-We use a database, so ensure you have a local `.env` file that contains the testing deployment database:
+We use a database, so ensure you `EXPORT` the testing deployment database:
 
 ```
 DATABASE_URL=postgres://localhost:5432/java_database_name
@@ -35,4 +35,4 @@ $ heroku open
 
 ## Documentation
 
-For more information, ask techied or ncsariowan on Discord
+For more information, ask on Discord
