@@ -75,7 +75,7 @@ public class Main {
 
     static void putHeaderDetails(OAuth2Authentication authentication, ModelMap map) {
         LinkedHashMap<String, String> details = (LinkedHashMap<String, String>) authentication.getUserAuthentication().getDetails();
-        map.addAttribute("userimage", details.get("picture") + "?sz=20");
+        map.addAttribute("userimage", details.get("picture") + "=s20");
         map.addAttribute("userloginaction", "/logout");
         map.addAttribute("username", "Welcome, " + details.get("given_name") + "!");
         map.addAttribute("logintext", "Log Out");
