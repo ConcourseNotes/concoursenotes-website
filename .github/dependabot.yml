@@ -1,0 +1,33 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.springframework.boot:spring-boot-starter-parent
+    versions:
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+  - dependency-name: org.springframework.boot:spring-boot-starter-security
+    versions:
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+  - dependency-name: org.springframework.security:spring-security-oauth2-jose
+    versions:
+    - 5.4.2
+    - 5.4.4
+    - 5.4.5
+  - dependency-name: org.webjars:bootstrap
+    versions:
+    - 4.6.0
+  - dependency-name: org.springframework.cloud:spring-cloud-security
+    versions:
+    - 2.2.4.RELEASE
+  - dependency-name: org.webjars:jquery
+    versions:
+    - 3.5.1
